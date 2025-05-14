@@ -5,3 +5,5 @@ Implémentation d'un système simple où des matelots effectuent des tâches sur
 - L'architecture choisie à été une statemachine pour les matelots, avec un singleton pour le GameManager.
 
 - Le package "AI Navigation" à été utilisé pour gérer le déplacement des matelots.
+
+- Vous pouvez configurer les paramètres des matelots et des tâches via des scriptables object dans le dossier "Dataholder"
