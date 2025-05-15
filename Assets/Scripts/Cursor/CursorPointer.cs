@@ -28,7 +28,7 @@ public class CursorPointer : MonoBehaviour
             {
                 CurrentSelected = PickObject(TaskLayerMask | MatelotLayerMask); //on regarde si l'utilisateur à cliqué sur une tâche ou un matelot
             }
-            else //Si quelque chose est déjà sélectionner, on regarde si on peu assigner un matelot à une tâche
+            else //Si quelque chose est déjà sélectionné, on regarde si on peut assigner un matelot à une tâche
             {
                 Assign();
             }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VFX //Une classe pour facilter la création d'instances dans la scène
+public class VFX //Une class pour faciliter la création d'instances dans la scène
 {
     public GameObject VFXObject; //L'objet à instancier
     public GameObject CurrentVFX; //l'objet instancié

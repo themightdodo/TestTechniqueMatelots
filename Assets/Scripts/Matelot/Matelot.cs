@@ -56,14 +56,14 @@ public class Matelot : MonoBehaviour
         {
             DoingTask_Transition();
         }
-        else if (Vector3.Distance(transform.position,navMeshAgent.destination) < matelotParameter.WalkSpeed/2 ) //Condition pour faire bouger les matelos disponible aléatoirement
+        else if (Vector3.Distance(transform.position,navMeshAgent.destination) < matelotParameter.WalkSpeed/2 ) //Condition pour faire bouger les matelots disponible aléatoirement
         {
            navMeshAgent.SetDestination(GetRandomPosition());
         }
     }
 
     /// <summary>
-    /// Les conditions pour passer à l'état d'éxecution de tâche
+    /// Les conditions pour passer à l'état d'exécution de tâche
     /// </summary>
     void DoingTask_Transition()
     {
@@ -82,7 +82,7 @@ public class Matelot : MonoBehaviour
     }
     void State_DoingTask()
     {
-        CurrentTaskDuration.Remove(Time.deltaTime * matelotParameter.Efficiency); //on fait avancer la progression de la tâche par rapport à l'éfficacité du matelot
+        CurrentTaskDuration.Remove(Time.deltaTime * matelotParameter.Efficiency); //on fait avancer la progression de la tâche par rapport à l'efficacité du matelot
         if (CurrentTaskDuration.Done()) //Si la tâche est réalisée, on met à jour le taux de fatigue du matelot et on change d'état, si l'énergie du matelot est à 0 on passe à l'état fatigué 
         {
             CurrentEnergy -= tasks[0].taskParameter.EnergyRemoved;
@@ -105,7 +105,7 @@ public class Matelot : MonoBehaviour
     void State_Tired()
     {
         CurrentEnergy += matelotParameter.EnergyRecoveryRate * Time.deltaTime; //le matelot récupère de l'énergie par rapport à sa vitesse de repos 
-        if(CurrentEnergy >= matelotParameter.MaxEnergy) //Si il a récupéré toute son énergie le matelot est a nouveau disponible
+        if(CurrentEnergy >= matelotParameter.MaxEnergy) //Si il a récupéré toute son énergie le matelot est à nouveau disponible
         {
             CurrentEnergy = matelotParameter.MaxEnergy;
             _MatelotStates = States.AVAIABLE;

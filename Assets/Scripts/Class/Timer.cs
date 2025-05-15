@@ -11,7 +11,7 @@ public class Timer
     }
 
     /// <summary>
-    /// fonction pour rafraichir le timer
+    /// fonction pour rafraîchir le timer
     /// </summary>
     /// <param name="value">la valeur à enlever au timer</param>
     public void Remove(float value)
